@@ -29,6 +29,11 @@ mongoose
     console.log(err);
   });
 
+//CronJob pings here:
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
