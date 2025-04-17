@@ -40,7 +40,7 @@ router.post("/login", async (req, res) => {
       return res.status(404).send({ message: "Authentication failed!" });
     }
     const token = jwt.sign({ userId: user?._id }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "7d",
     });
     let finalData = {
       userId: user?._id,
